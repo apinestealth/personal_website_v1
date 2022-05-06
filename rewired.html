@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+    <title>projects</title>
+    <link rel="stylesheet" href="https://use.typekit.net/ufx3hzi.css">
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+  <body>
+    <div class='back-button'>
+      <a href='projects.html'><div class='back-text'>back</div></a>
+    </div>
+    <div class='rewired-parent'>
+      <div class='mySlides'>
+        <div class='caption-big'>watch out: is mass surveillance really protecting public safety?</div>
+        <div class='caption-small link'><a class='special' href='https://stanfordrewired.com/post/watch-out'>read this piece</a></div>
+        <img class='rewired-pic' src='images/rewired/rewired-eyes.jpg'>
+      </div>
+      <div class='mySlides'>
+        <div class='caption-big'>“does money manipulate art?”: how today’s crypto-art boom revisits questions raised by 1960s conceptual art</div>
+        <div class='caption-small link'><a class='special' href='https://stanfordrewired.com/post/crypto-art-1960s-conceptual-art'>read this piece</a></div>
+        <img class='rewired-pic' src='images/rewired/rewired-nfts.gif'>
+      </div>
+      <div class='mySlides'>
+        <div class='caption-big'>portraits of the corporate bay area: a review of randall mann's proprietary</div>
+        <div class='caption-small link'><a class='special' href='https://stanfordrewired.com/post/corporate-bay-area'>read this piece</a></div>
+        <img class='rewired-pic' src='images/rewired/bay.gif'>
+      </div>
+      <div class='mySlides'>
+        <div class='caption-big'>viral tweets</div>
+        <div class='caption-small'>to be published</div>
+        <img class='rewired-pic' src='images/rewired/tweets.png'>
+      </div>
+      <button class="w3-button w3-display-left-rewired" onclick="plusDivs(-1)">&#10094;</button>
+      <button class="w3-button w3-display-right-rewired" onclick="plusDivs(+1)">&#10095;</button>
+    </div>
+    <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+
+      function plusDivs(n) {
+      showDivs(slideIndex += n);
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length} ;
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        x[slideIndex-1].style.display = "block";
+      }
+    </script>
+  </body>
+</html>

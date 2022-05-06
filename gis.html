@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+    <title>projects</title>
+    <link rel="stylesheet" href="https://use.typekit.net/ufx3hzi.css">
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+  <body>
+    <div class='back-button'>
+      <a href='projects.html'><div class='back-text'>back</div></a>
+    </div>
+    <div class='gis-parent' id='test-parent'>
+      <img class='mySlides' id='test-child' src='images/gis/DYL2.jpg'>
+      <img class='mySlides' src='images/gis/DYL3.jpg'>
+      <img class='mySlides' src='images/gis/DYL4.jpg'>
+      <img class='mySlides' src='images/gis/Lab1a.jpg'>
+      <img class='mySlides' src='images/gis/Lab1b.jpg'>
+      <img class='mySlides' src='images/gis/Lab1c.jpg'>
+      <img class='mySlides' src='images/gis/Lab2.jpg'>
+      <img class='mySlides' src='images/gis/Lab_3a.jpg'>
+      <img class='mySlides' src='images/gis/Lab_3b.jpg'>
+      <img class='mySlides' src='images/gis/Lab4_corridermap.jpg'>
+      <img class='mySlides' src='images/gis/Lab4_habitatcoveragemap.jpg'>
+      <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+      <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+    </div>
+    <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+
+      function plusDivs(n) {
+      showDivs(slideIndex += n);
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length} ;
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        x[slideIndex-1].style.display = "block";
+      }
+    </script>
+  </body>
+</html>
